@@ -1,17 +1,10 @@
-import "./App.css";
-
-import Routes from "./routes";
-
-import { RouterProvider } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
-import AppProvider from "./context";
+import { Routes } from "./src/routes";
+import ThemeProvider from "./src/theme/ThemeProvider";
 
 function App() {
   return (
     <ThemeProvider>
-      <AppProvider>
-        <RouterProvider router={Routes} />
-      </AppProvider>
+      <Routes />
     </ThemeProvider>
   );
 }
